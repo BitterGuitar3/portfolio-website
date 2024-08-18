@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    background-color: slateblue;
+    color: white;
+}
+
+img {
+    height: 250px;
+    border-radius: 200px;
+}
+
+a {
+    background-color: white;
+    display: block;
+    margin: 0 50px 0 50px;
+    border-radius: 20px;
+    color: slateblue;
+}
