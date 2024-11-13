@@ -1,7 +1,7 @@
 /* Global Styles */
 body{
     text-align: center;
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
     background-image: url(pictures/Background.png);
     background-attachment: fixed;
@@ -10,20 +10,15 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Header Styles */
-header {
-    /*background-color: black;*/
-    padding-bottom: 20px;
+body header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 50px;
     margin: 0;
-}
-
-h2 {
-    font-size: 28px;
-    margin: 10px 0;
 }
 
 h3 {
@@ -31,57 +26,203 @@ h3 {
     margin: 0;
 }
 
+small {
+    font-size: 25px;
+}
+
 p {
     font-size: 19px;
 }
 
+/* Content Styles */
+#content {
+    background-color: black;
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 16px;
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+#socials a{
+    font-size: 50px;
+    transition: transform 0.3s ease;
+}
+
+#socials a:hover {
+    transform: scale(1.2); 
+}
+
 /* Navigation Styles and Links */
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 } 
 
 .page {
-    margin: 0 30px;
-    padding: 5px 15px;
+    padding: 5px 25px;
     font-size: 15px;
     display: inline-block;
+    flex-grow: 1;
 }
 
 a {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     color: slateblue;
     text-decoration: none;
-    border-radius: 10px;
     text-align: center;
     transition: transform 0.5s ease;
 }
 
 a:hover {
     color: orange;
-    background-color: red;
+    background-color: rgb(66, 66, 66);
     transform: scale(1.05);
     box-shadow: -4px 12px 12px rgba(0, 0, 0, 0.3);
 }
 
-.social {
-    font-size: 20px;
-    display: block;
-    padding: 10px;
-    margin: 10px 50px;
-    box-shadow: -4px 8px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Content Section Styles */
-#content {
-    /*background: linear-gradient(to right ,slateblue, lightblue);*/
-}
+/* Section Styles */
 
 section {
     margin: 5px;
     border: solid 5px white;
     border-radius: 30px;
     align-items: center;
-    background-color: slateblue;
+}
+
+/* Intro Section */
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+
+#intro p {
+    background-color: red;
+    border: solid white 5px;
+    max-height: 100%;
+    max-width: 75%;
+    font-size: 25px;
+    margin: auto;
+    padding: 20px;
+}
+
+#intro h2 {
+    grid-column: 1 / -1;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 25px 25px 0 0;
+    line-height: 1.5;
+}
+
+#intro a {
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px auto;
+    background-color: white;
+}
+
+#intro #portrait {
+    border-radius: 50%;
+    height: 250px;
+    margin: 10px auto;
+}
+
+#intro #portrait:hover{
+    animation: bounce 2s infinite;
+}
+
+/* Experience Section */
+#experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Two columns for different experience lists*/
+    grid-template-rows: auto 2fr ;
+    column-gap: 20px;
+    align-items: start;
+}
+
+#experience h2 {
+    grid-column: 1/-1;
+    margin: 20px 0  0;
+}
+
+#experience h3 {
+    margin: 0 auto;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/* Experience List */
+.experienceList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    column-gap: 20px;
+    padding: 0 20px;
+}
+
+.experienceList li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    border: solid white 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+}
+
+.experienceList li:last-child {
+    grid-column: 1/ -1;
+    justify-self: center;
+    max-width: 44%;
+}
+
+.experienceList li:hover{
+    box-shadow: 0 0 15px 5px rgb(165, 102, 19);
+    transform: scale(1.1);
+}
+
+.experienceList img {
+    height: 35px;
+    margin-right: 5px;
+    filter: invert(100%);
+}
+
+.experienceList i {
+    font-size: 35px;
+    width: auto;
+    margin:auto 5px auto 0;
+}
+
+.experienceList .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceList span {
+    font-weight: bold;
+}
+
+.experienceList p {
+    font-size: 10px;
+    margin: 0;
+    color: rgb(185, 185, 185);
 }
 
 /* Project Styles */
@@ -112,120 +253,6 @@ div.project {
 
 .project-img:hover{
     animation: bounce 2s infinite;
-}
-
-
-/* Intro Section */
-#intro {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
-}
-
-#intro p {
-    background-color: red;
-    border: solid white 5px;
-    max-height: 100%;
-    max-width: 60%;
-    font-size: 25px;
-    margin: 0 auto 20px;
-    padding: 20px;
-}
-
-#intro h3 {
-    grid-column: 1 / -1;
-    justify-content: center;
-    display: inline-block;
-    border-radius: 25px 25px 0 0;
-    line-height: 1.5;
-    padding: 25px 0 0;
-}
-
-#intro a {
-    padding: 10px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-#intro #portrait {
-    height: 80%;
-    border-radius: 200px;
-    margin: 10px auto;
-}
-
-#intro #portrait:hover{
-    animation: bounce 2s infinite;
-}
-
-/* Experience Section */
-#experience {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /*Two columns for different experience lists*/
-    grid-template-rows: auto 2fr ;
-    column-gap: 20px;
-    align-items: start;
-}
-
-#experience h3 {
-    grid-column: 1/-1;
-    margin: 20px 0  0;
-}
-
-#experience h4 {
-    margin: 0 auto;
-    text-decoration: underline;
-    font-size: 20px;
-}
-
-/* Experience List */
-.experienceList {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    list-style-type: none;
-    column-gap: 20px;
-    padding: 0 20px;
-}
-
-.experienceList li {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    border: solid white 5px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-}
-
-.experienceList li:last-child {
-    grid-column: 1/ -1;
-    justify-self: center;
-    max-width: 49%;
-}
-
-.experienceList li:hover{
-    box-shadow: 0 0 15px 5px black;
-    transform: scale(1.1);
-}
-
-.experienceList img {
-    height: 35px;
-    width: auto;
-    margin-right: 5px;
-}
-
-.experienceList .text-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.experienceList span {
-    font-weight: bold;
-}
-
-.experienceList p {
-    font-size: 10px;
-    margin: 0;
-    color: rgb(185, 185, 185);
 }
 
 /* Footer Styles */
