@@ -1,0 +1,41 @@
+/* Project Styles */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: white 5px solid;
+    flex-wrap: wrap;
+}
+
+div.project {
+    width: 45%;
+    margin: 10px;
+    position: relative;
+}
+
+.project-img {
+    height: 100%;
+    width: 100%;
+    border: white 5px solid;
+    border-radius: 40px;
+}
+
+.project-type, .project-title {
+    display: none;
+    position: absolute;
+    left: 10px;
+    color: white;   /* Make the text visible */
+    font-size: 18px; /* Font size for the text */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional background to make the text stand out */
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.project-type{
+ top: 10px;
+}
+
+.project-title {
+bottom: 10px;
+}
