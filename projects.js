@@ -1,23 +1,14 @@
 init();
 
 function init() {
-    displayInfo();
-}
-
-function displayInfo(){
     const projects = document.querySelectorAll(".project");
-    projects.forEach(element => {
-        const type = element.querySelector(".project-type");
-        const name = element.querySelector(".project-title");
+    projects.forEach(function(project) {
+        project.addEventListener('click', function() {
+            console.log("Project clicked!");
+            const targetURL = project.getAttribute('data-target-url');
 
-        element.addEventListener('mouseenter', function() {
-            type.style.display = "inline-block";
-            name.style.display = "inline-block";
-        })
-
-        element.addEventListener('mouseleave', function() {
-            type.style.display = "none";
-            name.style.display = "none";
-        })
+            console.log("Should navigate to", targetURL);
+            window.location.href = targetURL;
+        });
     });
 }

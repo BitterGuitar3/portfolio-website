@@ -1,0 +1,120 @@
+/* Intro Section */
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+
+#intro p {
+    background-color: red;
+    border: solid white 5px;
+    max-height: 100%;
+    max-width: 75%;
+    font-size: 25px;
+    margin: auto;
+    padding: 20px;
+}
+
+#intro h2 {
+    grid-column: 1 / -1;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 25px 25px 0 0;
+    line-height: 1.5;
+}
+
+#intro a {
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px auto;
+    background-color: white;
+}
+
+#intro #portrait {
+    border-radius: 50%;
+    height: 250px;
+    margin: 10px auto;
+}
+
+#intro #portrait:hover{
+    animation: bounce 2s infinite;
+}
+
+/* Experience Section */
+#experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Two columns for different experience lists*/
+    grid-template-rows: auto 2fr ;
+    column-gap: 20px;
+    align-items: start;
+}
+
+#experience h2 {
+    grid-column: 1/-1;
+    margin: 20px 0  0;
+}
+
+#experience h3 {
+    margin: 0 auto;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/* Experience List */
+.experienceList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    column-gap: 20px;
+    padding: 0 20px;
+}
+
+.experienceList li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    border: solid white 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+}
+
+.experienceList li:last-child {
+    grid-column: 1/ -1;
+    justify-self: center;
+    max-width: 44%;
+}
+
+.experienceList li:hover{
+    box-shadow: 0 0 15px 5px rgb(165, 102, 19);
+    transform: scale(1.1);
+}
+
+.experienceList img {
+    height: 35px;
+    margin-right: 5px;
+    filter: invert(100%);
+}
+
+.experienceList i {
+    font-size: 35px;
+    width: auto;
+    margin:auto 5px auto 0;
+}
+
+.experienceList .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceList span {
+    font-weight: bold;
+}
+
+.experienceList p {
+    font-size: 10px;
+    margin: 0;
+    color: rgb(185, 185, 185);
+}

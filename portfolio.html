@@ -1,17 +1,18 @@
 <!doctype html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="projects.css">
+        <base href="/Career/portfolio-website/">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/projects.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Name - Portfolio</title>
+        <title>Andrew Johnson - Portfolio</title>
     </head>
     <main>
         <body>
             <div id="content">
                 <header>
                     <div id="Name_and_Title">
-                        <h1>name</h1>
+                        <h1>Andrew Johnson</h1>
                         <small>Aspirng Game Developer</small>
                     </div>
                     <nav>
@@ -26,28 +27,28 @@
                 </header>
 
                 <div class="projects-container">
-                    <div class="project">
+                    <div class="project" data-target-url="Projects/Sky_Cleaner.html">
                         <img src="pictures/Sky Cleaner.PNG" alt="Sky Cleaner game" class="project-img">
                         <div class="project-info">
                             <p class="project-type">Full Game</p>
                             <p class="project-title">Sky Cleaner</p>
                         </div>
                     </div>
-                    <div class="project">
+                    <div class="project" data-target-url="Projects/Count.html">
                         <img src="pictures/Count.PNG" alt="A game machanic demo" class="project-img">
                         <div class="project-info">
                             <p class="project-type">Prototype</p>
                             <p class="project-title">Count</p>
                         </div>
                     </div>
-                    <div class="project">
+                    <div class="project" data-target-url="Projects/Selection.html">
                         <img src="pictures/Basic Character selection.PNG" alt="A basic character slection demo" class="project-img">
                         <div class="project-info">
                             <p class="project-type">Prototype</p>
                             <p class="project-title">Selection</p>
                         </div>
                     </div>
-                    <div class="project">
+                    <div class="project" data-target-url="Projects/VR-Walk.html">
                         <img src="pictures/VR Submission pic.JPG" alt="My VR walking simulator project" class="project-img">
                         <div class="project-info">
                             <p class="project-type">Full Game</p>
@@ -55,7 +56,13 @@
                         </div>
                     </div>
                 </div>
+
+                <footer>
+                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                </footer>
             </div>
+
+            <script src="projects.js"></script>
         </body>
     </main>
 </html>

@@ -15,6 +15,11 @@
     border-radius: 40px;
     cursor: pointer;
     border: white 5px solid;
+    transition: transform 0.3s ease;
+}
+
+.project:hover{
+    transform: scale(1.07);
 }
 
 .project-img {
