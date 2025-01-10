@@ -92,3 +92,17 @@ button:hover {
     grid-column: 2;
     grid-row: 1/3;
 }
+
+#downloads {
+    grid-column: 1/-1;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#downloads > * {
+    padding: 5px;
+    font-size: larger;
+    background-color: rgb(48, 48, 48);
+}
