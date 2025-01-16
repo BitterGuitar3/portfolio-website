@@ -56,17 +56,60 @@
                             <ul>
                                 <li>Engine: Unity</li>
                                 <li>Role: Programmer</li>
-                                <li>Timeline: 2 Weeks</li>
+                                <li>Timeline: 1 Weeks</li>
                                 <li>Team: Solo Project</li>
                             </ul>
                         </div>
                         <div id="downloads" class="detail">
-                            <a href=""  target="_blank">Github Repository</a>
-                            <a href="../../Downloads/CountingPrototype_Windows.zip" download="CountingPrototype_Windows.zip">Windows Download</a>
+                            <a href="https://github.com/BitterGuitar3/Counter-Prototype"  target="_blank">Github Repository</a>
+                            <a href="../../Downloads/CountingProto_Windows.zip" download="CountingPrototype_Windows.zip">Windows Download</a>
                         </div>
                         <div id="project-description" class="detail">
                             <h4 style="font-size: 20px;">About</h4>
-                            <p>This is just filler text until I get design i like.</p>
+                            <p>
+                                Count is a prototype I made based off a certain criteria I was given by unity while going down their Junior Programmer Pathway. The criteria that was given to me
+                                was to create a project out of simply a ball falling into a countainer and being counted by some kind of counter. They provided a little demonstration of a bunch
+                                of balls free falling into a glass box and being counted up. After a little bit of thinking, I knew what I wanted to make. I wanted to make some kind of cannon
+                                shootig prototype that kind of mimicked some old games I used to play as a child.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <p>
+                                The main mechanic that is featured within this prototype was the cannon and how its power is determined. Normally in games, cannons either have a default strength
+                                it shoots at or you can upgrade them through some kind of game economy, but I personally thought mimicking those was a little too simple. Instead I challenged myself
+                                to create a cannon that shot an object out with a variable amount of force based off of user input. In this prototype, the cannon shoots out apples based on how long
+                                the user holds down the space bar. Using this mechanic, the player simply needs to try and shoot the apples into the baskets to add to the count.
+                            </p>
+                            <p>
+                                Another small thing that I included in the prototype was a bar at the top that shows the player how much power they are putting into their shot compared to the max
+                                power they can put behind it. This allows the player to know what their limits are as well as what power works well so that they are not sitting there guessing
+                                entirely the whole time.
+                            </p>
+                            <h4>What I Learned</h4>
+                            <p>
+                                In pursuit of making this prototype, I learned a couple of small things that I can easily use for future projects. The biggest and most helpful things I learned was
+                                the how to clamp objects in unity. Instead of constantly resetting the rotation of objects that try rotating out of the scope they should be in, clamping them allows
+                                the code to be simplified instead of doing doing different checks. It keeps the object locked within the scope it should be in instead of checking if its outside of
+                                scope and setting it back in.
+                            </p>
+                            <p>
+                                Another thing that I learned and reinforced, as I have done similar stuff before, was commuticating with the canvas objects and updating this. More specifically I'm
+                                talking about the power bar. When dealing with unity, I havent done muthc with slide bars. Working on this prototype helped me understand how they are structured a bit
+                                a bit better so I could easily understand how to update the bar to have it show off the power the next shot would have. Overall, this was a simple prototype that I was
+                                using to reinfoce some knowledge I had and see how I could build a mechanic that I havent dealth with before (The rotation clamping and show power).
+                            </p>
+                            <h4>Potential Fixes and Updates</h4>
+                            <p>
+                                I did have some issues that I kept running into and still run into. Primarily it is dealing with the models of the baskets themselves. As I am limited on assets based off
+                                of the free items I can find on the Unity Asset store, it makes it really difficult to find anything that fits my needs. The models came with really bade hitboxes so I 
+                                had to manually make the colliders, which make for interesting bounce offs with the apples. It also makes it more difficult to shoot them into the baskets. If I had better
+                                models that had better colliders, I would have used them over what I used. 
+                            </p>
+                            <p>
+                                Another thing I should change is the forces of everything acting upong the apples. They do not fall as fast as I would anticipate and somehow the baskets and targets exert
+                                enough force to send them flying a bit. Not only that, but apples when they hit the backboard will tend to shoot upwards with a decent amount of force that just does not
+                                feel natural to me. If this were to be a published part of a game, I would definately address the issue and fix it, but as this was a prototype with a different focus, I 
+                                decided to put my efforts into the main focus and continue on with my journy down the Junio Programmer pathway.
+                            </p>
                         </div>
                     </div>
                 </section>

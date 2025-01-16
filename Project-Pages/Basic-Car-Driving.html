@@ -75,7 +75,46 @@
                         </div>
                         <div id="project-description" class="detail">
                             <h4 style="font-size: 20px;">About</h4>
-                            <p>This is just filler text until I get design i like.</p>
+                            <p>
+                                This was the first ever full project I made in Unity. During the Unity Learn Junior Programmer Pathway, there were 5 prototypes that I made along with my 
+                                own project <a href="Sky_Cleaner.html">Sky Cleaner</a>. This prototype is used as an introductory step into coding in Unity.
+                            </p>
+                            <h4>What I Learned</h4>
+                            <p>
+                                Since this was my fist ever project in Unity, there was plenty for me to learn outside of the basic navigation of the UI. The first major things I learned 
+                                together was moving objects around with code, more specfically constant movement over time. With Unity, the update fonction gets called every frame, but to
+                                move an object over time consistently for any user, I needed to make sure Time.deltaTime was used to move a certain amount in one second instead of every frame.
+                                With understanding Time.deltaTime and the basics of tranform and its functions like Translate and Rotate, it was time to understand how to get input from the
+                                user.
+                            </p>
+                            <p>
+                                Input from the user can be done in a few ways. The main ones I am aware of and use more of is Input.GetAxis and Input.GetKey(Down/Up). From my knowledge of how
+                                Unity works, there are a set of inputs that it automatically tracks in certain variables. The most notable ones I use is its axis variables labeled "Horizontal"
+                                and "Vertical" which are pretty self explanatory. The vertical keeps track of the input on keys W and S and the horizontal keep track of input on keys A and D.
+                                I also had to make another set of these saved for player 2 to control the second car. This time it kept track of input from the arrow keys. These variables 
+                                contain a float number between -1 and 1 based on how long the buttons were pressed (its a really short time going from 0 to either direction).Retrieving these 
+                                values can help simplyfy code a bit as you can just store them in your own variable and use those for control instead of checking for the keys being pressed 
+                                yourself. The other input that I commonly use is Input.GetKey(Down/Up). Using this can help keep track of when is key is initially pressed, when its held, or when
+                                it is released to trigger different code segments. In this prototype, I only checked for when certain keys were pressed to do certain things.
+                            </p>
+                            <p>
+                                Next thing I learned about was basic physics implementation. What I mean by this is how to apply force to an object in different ways as well as learned about rigid
+                                bodies and how they can be customized to make more realistic interactions. In the rigid body you can increase the mass of an object, tell it to use gravity, tell
+                                the object how to handle collisions and even freeze to object on different axes. In coding, you can change these yourself but you can also do things like adding
+                                force to the object in different ways like over time or at an instna timpulse, but you can also pul informtion about the rigid body, likes it speed. With information
+                                like that, you can use it to carry out other things, like a speedometer.
+                            </p>
+                            <p>
+                                Last thing I learned about was basic UI coding, more specifically TMP (text mesh pro). Using the velocity of the car's rigid body, I was able to make a very basic 
+                                speedometer that showed the speed and RPMs of the cars. The calculations were provided by Unity but are obviously not very accurate as its just a basic representation.
+                                The important thing was learning how to make a basic UI for players to get needed information, and later interact with in other projects. I also learned how I can update
+                                the text of the UI when certain things happen, like the RPMs go up as the object obtains a higher velocity until it "shifts" gears which is not implemented at all.
+                            </p>
+                            <p>
+                                Overall, this was a nice introductory project to kick off my learning of the game engine as well as learning game develpment in general. It also gives me a more physical
+                                way of understanding programming and how different things interact with each other in the coding world. If I were to have someone ask me about a great place to start
+                                learning Unity this is where I would point them to.
+                            </p>
                         </div>
                     </div>
                 </section>
