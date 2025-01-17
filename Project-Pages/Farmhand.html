@@ -71,8 +71,52 @@
                             <a href="../../Downloads/FarmhandProto_Windows.zip" download="FarmhandProto_Windows.zip">Windows Download</a>
                         </div>
                         <div id="project-description" class="detail">
-                            <h4 style="font-size: 20px;">About</h4>
-                            <p>This is just filler text until I get design i like.</p>
+                            <h4>About</h4>
+                            <p>
+                                This project was the second prototype I made out of the 5 for the Junior Programmer Pathway. The core focus of this project was developing basic gameplay. In this
+                                prototype, the player can control the character using the A and D keys to move left and right. They can also press the spacebar to shoot food that they can use 
+                                to feed the animals that are flying by on the screen. The bigger the animal, the more food it takes to feed them. And before you say anything, yes I understand 
+                                that its a bit ironic to feed a cow some steak.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <p>
+                                Farmhand has basic movement controls that the player can use to interact with the game. The goal of the game is to feed as many animals as you possibly can before
+                                you run out of lives. You lose a life when you either get hit by an animal or if the animal makes it off screen before you can feed it. For every animal that is fed,
+                                you get score added to your total score based off of how much you had to feed the animal.
+                            </p>
+                            <p>
+                                The 2 major features of the prototype are pretty basic, but they do open a lot of possibilities for future projects. The first one being the random generation of
+                                the animals. They can spawn either from the left or right or from the top at any random point along those sides. This creates a more dynamic game that isnt set in 
+                                a constant pattern that is fully predictable. The second feature is the use of a healthbar type slider that is on top of the animals to let the player know how much
+                                then need to feed the animal in order to score. Instead of it going down like a health bar, it goes up until its full and then score points for the player.
+                            </p>
+                            <h4>What I Learned</h4>
+                            <p>
+                                One thing I learned was how to spawn objects in the world whether it is through random generation or something set in stone. Given my background in coding from my major 
+                                I already conceptually knew how to chose items from an array randomly and spawn them in a postion either randomly or fixed. The trick was knowing the right functions
+                                to use that are provided by Unity. Random.Range selects a number between the minimum value (inclusive) and the max value (exclusive) that you can then use to select
+                                a random object from and array or list and then use it to also pick a range of spawn points for that object to spawn at. Then all it simply requires you to do is use the 
+                                Instantiate() function to spawn the object and set its postion and rotation based on what you as the programmer want. This was the method I did for spawning the animals,
+                                but spawning the food to feed the animals went through a different approach.
+                            </p>
+                            <p>
+                                To spawn the food for the player to use to feed the animals, I created what is called an object pooler. An object pooler is basically a group of objects, a "pool", that
+                                are held by a container object that acts as the parent object. What an object pooler does is it already has created all the objects, but they are all deactivated until 
+                                they are needed. In Farmhand, when the player presses the space bar, the game checks the object pooler and its list to retireve the first inactive object and sets it active.
+                                Once it is activated, its postiion and rotation is set to be in front of the player and shoots forwards. What I learned about object pooling vs spawning an destroying objects
+                                is that it basically helps improve performance and efficiency of the game as it doesnt have to deal with the CPU overhead of creating a new object and destorying it causing
+                                garbage collection. This leads to a smoother game and better resource management.
+                            </p>
+                            <p>
+                                The last big thing I learned making this prototype was how to handle object collisions. In Unity, there are collider boxes that can either act as a physical collider box,
+                                kinda like an invisible wall you would run into game, or they can act as trigger moxes when something enter them. Typically you would want a physical collider to match the
+                                shape and size of the object its attached to instead of just being an actual box or other primitive shape. But with either a collider or a trigger, they both have a 
+                                function they can call when something interacts with them. When 2 objects that have colliders or rigidbodies touch, they call the OnCollisionEnter function, and you can
+                                use this to trigger whatever code you want. When a collider that is marked as a trigger overlaps with another collider, it calls the OnTriggerEnter function which then
+                                can do whatever you want it to do. In Farmhand, it was best to use the OnTriggerEnter as when 2 objects collide, they can move. If I were to use OnCollisionerEnter, the
+                                food would have been deactivated, but some of the animals would still be moving, and that would have caused them to shift from the course I set them on. A little work
+                                around I could do for that was free which axis the animals moved on, but that would have required more slightly complicated code.
+                            </p>
                         </div>
                     </div>
                 </section>
