@@ -76,7 +76,51 @@
                         </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
-                            <p>This is just filler text until I get design i like.</p>
+                            <p>
+                                Ball-Ninja is the last prototype I made while going down the Junior Programmer Pathway in Unity Learn. The focus on this prototype was to introduce the 
+                                implementation of a user interface into projects.This prototype game has a functional title screen, a score tracker, a pause screen, and a game over screen. By the end of
+                                the unit in Unity Learn, this project becomes a full playable experience that the user does not need to restart the app to keep using. The gmae is similar
+                                in how the famous <a href="https://www.halfbrick.com/games/fruit-ninja-classic">Fruit Ninja</a> works when the player is playing and interacting with the game.
+                            </p>
+                            <p>
+                                To play, all the player has to do is select the difficulty they want to play on and try to score as many points as they possibly can. The player earns points
+                                by clicking and swiping their mouse to hit all the balls, but they must watch out for the skulls as they take away from the player's score. They also have 3 
+                                lives. A player loses a life when a ball falls off screen without the player hitting it to score any points. So the player's basic objective is to hit all the
+                                balls and avoid the skulls, but sometimes it may be needed for them to hit a skull in order to keep a life.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <p>
+                                This prototype game is controlled by only the user's mouse. All they need to do is click and swipe to achieve their goals. The balls and skulls all spawn at 
+                                random locations along the bottom and are tossed up for the player to hit. The player knows when they can hit an object by the trail that folllows their cursor
+                                when they are holding down the left click on the mouse. When any of the objects are hit, they will dissapear and haver a colorfull explosion occur. The skulls 
+                                however will have a black explosion as you do no want to hit them.
+                            </p>
+                            <p>
+                                Ball-Ninja also comes with a basic fully functioning UI unlike the previous prototypes in the pathway. At the title screen, you get the option to select what 
+                                difficulty you would like to play on. There is also a slider below the difficulties you can use to choose how loud you would like the music to play in the
+                                background while you play the game. When you eventually lose and reach a game over, you can click the restart button to play again. If you need to take a break
+                                or go do something while playing, you can simply press the P key and the pause screen will appear, stopping the game with all the objects staying in place
+                                until you press the P key again to resume playing.
+                            </p>
+                            <h4>What I Learned</h4>
+                            <p>
+                                The biggest challenge for me here was figuring out how to make the swiping in the game happen. The solution that was shown to me to accomplish this was have an 
+                                invisible object that had a box collider, a trail renderer and a custom script I made to accomplish this. Simply if I was holding down my left click on the mouse,
+                                this object would move to the location of my mouse cursor. If it was in the middle of swiping, it would have a boolean value representing that I am swiping, and
+                                this value would control when the collider and trail were active. The trail renderer itself took care of the complicated part which was having a trail follow the
+                                object as it mover around showing where the play has swiped.
+                            </p>
+                            <p>
+                                THe main focus of this project was learning about how to peice together a functioning UI for players to make the game more complete instead of having to do things 
+                                like restart the application over and over again to play the game more. For buttons, they don't always need their own scripts. The basically only need a reference
+                                to an object and a function that it can access to trigger the code needed to accomplish whatever the button should be accomplishing. If you do make a script for a
+                                button, like i did for the difficulty buttons, you need to make sure to call button.onClick.AddListener(function) to ensure that when the button is clicked, it 
+                                triggers the function it needs to do. IF the button needs to trigger something that another script has, that function needs to be public or the button cannot call 
+                                the function and trigger its code. Lastly, I learned that if you want to restart a game that is a singular scene like this prototype, all you need to do is make sure 
+                                to have some way to call SceneManager.LoadScene(Scene you want to re load). The onbly issue with doing this as it desn't save anything like the volume you had 
+                                orginially for the music. Next thing I need to learn is how to save things like settings so when a game reloads or resets like you do for a game over, you so not
+                                have to reconfigure the settings.
+                            </p>
                         </div>
                     </div>
                 </section>
