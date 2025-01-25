@@ -6,6 +6,11 @@ p {
     text-indent: 4em;
 }
 
+h3 {
+    font-size: 30px; 
+    font-weight: normal;
+}
+
 h4 {
     font-size: 20px;
     text-align: center;
