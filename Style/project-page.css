@@ -99,12 +99,19 @@ button:hover {
     grid-column: 1/-1;
     padding: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-#downloads > * {
+#downloads a {
     padding: 5px;
     font-size: larger;
     background-color: rgb(48, 48, 48);
+}
+
+#downloads p {
+    margin: 5px 20px;
+    font-size: 15px;
+    flex-basis: 100%;
 }
