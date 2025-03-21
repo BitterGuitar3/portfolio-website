@@ -29,20 +29,20 @@
                     <div id="carousel-container">
                         <div id="carousel">
                             <div class="carousel-slide">
-                                <img src="" alt="">
+                                <img src="../Media/Projects/SMITE Predictor/SMITE1.PNG" alt="Code showing various functions used in the project">
                             </div>
 
                             <div class="carousel-slide">
-                                <img src="" alt="">
+                                <img src="../Media/Projects/SMITE Predictor/SMITE2.PNG" alt="Code showing custom API calls for the server">
                             </div>
                             
                             <div class="carousel-slide">
-                                <img src="" alt="">
+                                <img src="../Media/Projects/SMITE Predictor/SMITE3.PNG" alt="The scheme of the database. It just a singular table">
                             </div>
 
                             <div class="carousel-slide">
                                 <video autoplay controls>
-                                    <source src="" type="video/mp4">
+                                    <source src="../Media/Projects//SMITE Predictor/SMITEPredictor.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -52,10 +52,10 @@
                     </div>
                     <div id="project-details">
                         <div id="title" class="detail">
-                            <h3 style="font-size: 30px; font-weight: normal;">Name: <strong></strong></h3>
+                            <h3 style="font-size: 30px; font-weight: normal;">Name: SMITE Predictor<strong></strong></h3>
                         </div>
                         <div id="type" class="detail">
-                            <h3 style="font-size: 30px; font-weight: normal;">Project Type: <strong></strong></h3>
+                            <h3 style="font-size: 30px; font-weight: normal;">Project Type: Prototpye<strong></strong></h3>
                         </div>
                         <div id="info" class="detail">
                             <h4 style="font-size: 20px;">Basic Info</h4>
@@ -66,14 +66,44 @@
                             </ul>
                         </div>
                         <div id="downloads" class="detail">
-                            <a href=""  target="_blank">Github Repository</a>
-                            <a href="" download="">Windows Download</a>
+                            <a href="https://github.com/BitterGuitar3/SMITE-project"  target="_blank">Github Repository</a>
+                            <a href="../Downloads/SMITEPredictor.zip" download="">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
                         </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
-                            <p>This is just filler text until I get design i like.</p>
+                            <p>
+                                The whole idea behind this project is to be able to predict the chances of a team in SMITE winning by taking data in about the stats of the players, the
+                                stats of the gods and the stats of the common items the players would normally buy for a god and putting them against another team with their information.
+                                This is a project my brother really wants to do but unfortunately has not been able to contribute to due other priorities in life. We also have hit a roadblock
+                                in the development in the project with not having access to APIs and other information to make up to date predcitions. On my side of things, I have other 
+                                projects I am working on, but plan on making some progress here and there on the end prodcut of this. If not to completion, to at least learn something new.
+                            </p>
+                            <p>
+                                This predictor offers the user a selection of 24 gods that were available during the close beta of SMITE 2 with their original SMITE 1 stats (as I myself
+                                didn't have access as to it). Like the game, each team cannot have a duplicate god, meaning the whole team cannot play Loki as an example. The idea is that
+                                this list will update itself if and when Hi-Rez adds other gods as this selection dropdown is created by the webpage calling the server to fetch all the gods
+                                in the database. AFter the user selects the team compositions, they can submit the selections, which leads to the webpage calling the server for the information
+                                of each god that is made in the selection to use their stats to make a very rouch prediction of who will win. Currently it only uses the stats of the level 1 
+                                version of all the gods. The predictor simply takes the teams average stats and compares it to the other team. If it beats the other team in a category, the
+                                result variable ticks in theri favor by 1. Vice versa if they lose. After all the calculations, depending on which side the variable favors (postive for team
+                                1 and negative for team 2), the page will print a message saying who is more likely to win.
+                            </p>
+                            <h4>What I Learned</h4>
+                            <p>
+                                Like I said, this is a rough prototype of the general idea we want to pursue. Its far from perfect, but it gets the general idea across. In the pursuit of 
+                                making this prototype. I learned plenty. I atually started working on it before this portfolio. I had to relearn the basics of CSS, HTML, and Javascript.
+                                Afterwards, I had to figure out how to set up a basic database that can be used to retrieve the data. This biggest challenge of all was learning about the 
+                                server communication between the front-end website and the database in the back-end. It is a differnt way of thinking as I am used to things executing in order.
+                                But when I was making the prediction calculations part, I kept running into issues with executing certain code too soon as the server is taking time to respond
+                                to the API requests from the site, resulting in errors or calculations not acting acordingly. Eventually, I figured things out with the help of online resources.
+                            </p>
+                            <p>
+                                While this project may have not gone terribly in depth or isn't very complex, it at least exposed me to the basics of networking, which will be a challenge on
+                                its own for me later down the road when I start trying to make a game multiplayer. I know it will be necessary to look into sooner than later for the WW2
+                                FPS shooter game that I am working on with a friend as it's end goal is to be a multiplayer game.
+                            </p>
                         </div>
                     </div>
                 </section>
