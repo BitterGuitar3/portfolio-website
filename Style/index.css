@@ -118,3 +118,8 @@
     margin: 0;
     color: rgb(185, 185, 185);
 }
+
+#About_Me p {
+    margin-right: 5px;
+    margin-left: 5px;
+}
