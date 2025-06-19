@@ -74,60 +74,43 @@
                             <a href="../Downloads/BasicCarDrivingProto_Windows.zip" download="BasicCarDrivingProto_Windows.zip">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
-                        </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
                             <p>
-                                This was the first ever full project I made in Unity. During the Unity Learn Junior Programmer Pathway, there were 5 prototypes that I made along with my 
-                                own project <a href="Sky_Cleaner.html">Sky Cleaner</a>. This prototype is used as an introductory step into coding in Unity.The concept behind this prototype
-                                was to learn the foundations of setting up player controls for any games and projects that I may make in the future. Using the WASD keys for player 1 and 
-                                the arrow keys for player 2, you can control a car be driving it forwards and backwards and evern turn. You can press the F key to change camera for player 1 
-                                and Right Shift for switch camera for player 2.
+                                This was my first Unity prototype, created during the Unity Learn Junior Programmer pathway. The goal was to learn and apply the fundamentals of movement, 
+                                input handling, physics, and basic UI through a simple two-player driving game.
                             </p>
+                            <p>
+                                Each player controls a car using separate input schemes (WASD and arrow keys), with the ability to move forward/backward, rotate, and switch between different
+                                 camera perspectives. I also added a basic speedometer UI using the car's velocity to simulate real-time feedback.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <ul>
+                                <li><strong>Player controls: </strong>WASD for Player 1 and arrow keys for Player 2. Forward/backward movement and rotation based on real-time input.</li>
+                                <li><strong>Camera Switching: </strong>Each player can toggle between camera views (F for Player 1, Right Shift for Player 2)</li>
+                                <li><strong>Physics Integration: </strong>Cars are powered by Unity's Rigidbody system, including velocity-based calculations and basic collision handling.</li>
+                                <li><strong>Speedometer UI: </strong>TextMeshPro-based display updates in real time based on the Rigidbody's velocity, simulating speed and RPM feedback.</li>
+                            </ul>
                             <h4>What I Learned</h4>
+                            <p>This prototype helped me estabish a solid foundation in Unity development. Key takeaways include: </p>
+                            <ul>
+                                <li><strong>Movement & Input: </strong>Implemented consistent movement using Input.GetAxis and Input.GetKey, while applying Time.deltaTime for frame-independent
+                                 motion.</li>
+                                <li><strong>Local vs. World Space: </strong>Gained a practical understanding of object rotation and movement in different coordinate spaces.</li>
+                                <li><strong>Physics Programming: </strong>Manipulated Rigidbody components to simulate realistic force, mass, and motion.</li>
+                                <li><strong>UI Programming: </strong>Created dynamic UI using TextMeshPro and learned to bind in-game values (like velocity) to visual elements.</li>
+                            </ul>
+                            <h4>Reflection</h4>
                             <p>
-                                Since this was my fist ever project in Unity, there was plenty for me to learn outside of the basic navigation of the engine. The first major things I learned 
-                                together was moving objects around with code, more specfically constant movement over time. With Unity, the update function gets called every frame, but to
-                                move an object over time consistently for any user, I needed to make sure Time.deltaTime was used to move a certain amount in one second instead of every frame.
-                                With understanding Time.deltaTime and the basics of tranform and its functions like Translate and Rotate, it was time to understand how to get input from the
-                                user. While learning about this, I was also taught the difference of moving objects based on their relative position and rotation vs moving and rotating them
-                                relative to the world. This made so many things I picture so much easier to program. I would always think things rotating was only based on the object itself 
-                                and not just in the world. 
-                            </p>
-                            <p>
-                                Input from the user can be done in a few ways. The main ones I am aware of and use more of is Input.GetAxis and Input.GetKey(Down/Up). From my knowledge of how
-                                Unity works, there are a set of inputs that it automatically tracks in certain variables. The most notable ones I use is its axis variables labeled "Horizontal"
-                                and "Vertical" which are pretty self explanatory. The vertical keeps track of the input on keys W and S and the horizontal keep track of input on keys A and D.
-                                I also had to make another set of these saved for player 2 to control the second car. This time it kept track of input from the arrow keys. These variables 
-                                contain a float number between -1 and 1 based on how long the buttons were pressed (its a really short time going from 0 to either direction).Retrieving these 
-                                values can help simplyfy code a bit as you can just store them in your own variable and use those for control instead of checking for the keys being pressed 
-                                yourself. The other input that I commonly use is Input.GetKey(Down/Up). Using this can help keep track of when is key is initially pressed, when its held, or when
-                                it is released to trigger different code segments. In this prototype, I only checked for when certain keys were pressed to do certain things.
-                            </p>
-                            <p>
-                                Next thing I learned about was basic physics implementation. What I mean by this is how to apply force to an object in different ways as well as learned about rigid
-                                bodies and how they can be customized to make more realistic interactions. In the rigid body you can increase the mass of an object, tell it to use gravity, tell
-                                the object how to handle collisions and even freeze to object on different axes. In coding, you can change these yourself but you can also do things like adding
-                                force to the object in different ways like over time or at an instna timpulse, but you can also pul informtion about the rigid body, likes it speed. With information
-                                like that, you can use it to carry out other things, like a speedometer.
-                            </p>
-                            <p>
-                                Last thing I learned about was basic UI coding, more specifically TMP (text mesh pro). Using the velocity of the car's rigid body, I was able to make a very basic 
-                                speedometer that showed the speed and RPMs of the cars. The calculations were provided by Unity but are obviously not very accurate as its just a basic representation.
-                                The important thing was learning how to make a basic UI for players to get needed information, and later interact with in other projects. I also learned how I can update
-                                the text of the UI when certain things happen, like the RPMs go up as the object obtains a higher velocity until it "shifts" gears which is not implemented at all.
-                            </p>
-                            <p>
-                                Overall, this was a nice introductory project to kick off my learning of the game engine as well as learning game develpment in general. It also gives me a more physical
-                                way of understanding programming and how different things interact with each other in the coding world. If I were to have someone ask me about a great place to start
-                                learning Unity this is where I would point them to.
+                                As my first Unity-based coding project, this was an important step toward learning how to connect code, gameplay logic, and user feedback. It taught me
+                                the building blocks of player mechanics, helped reinforce OOP concepts, and showed me how to bring code to life is a 3D space.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <footer>
-                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
                 </footer>
             </div>
 

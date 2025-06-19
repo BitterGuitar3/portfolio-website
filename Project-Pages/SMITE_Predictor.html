@@ -70,46 +70,80 @@
                             <a href="../Downloads/SMITEPredictor.zip" download="">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
-                        </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
                             <p>
-                                The whole idea behind this project is to be able to predict the chances of a team in SMITE winning by taking data in about the stats of the players, the
-                                stats of the gods and the stats of the common items the players would normally buy for a god and putting them against another team with their information.
-                                This is a project my brother really wants to do but unfortunately has not been able to contribute to due other priorities in life. We also have hit a roadblock
-                                in the development in the project with not having access to APIs and other information to make up to date predcitions. On my side of things, I have other 
-                                projects I am working on, but plan on making some progress here and there on the end prodcut of this. If not to completion, to at least learn something new.
+                                The idea behind this project is to create a tool that predicts the likelihood of a team winning in SMITE based on various player, god, and item stats. 
+                                The tool compares one team's stats against another team's to provide a rough prediction of the match outcome.
                             </p>
                             <p>
-                                This predictor offers the user a selection of 24 gods that were available during the close beta of SMITE 2 with their original SMITE 1 stats (as I myself
-                                didn't have access as to it). Like the game, each team cannot have a duplicate god, meaning the whole team cannot play Loki as an example. The idea is that
-                                this list will update itself if and when Hi-Rez adds other gods as this selection dropdown is created by the webpage calling the server to fetch all the gods
-                                in the database. AFter the user selects the team compositions, they can submit the selections, which leads to the webpage calling the server for the information
-                                of each god that is made in the selection to use their stats to make a very rouch prediction of who will win. Currently it only uses the stats of the level 1 
-                                version of all the gods. The predictor simply takes the teams average stats and compares it to the other team. If it beats the other team in a category, the
-                                result variable ticks in theri favor by 1. Vice versa if they lose. After all the calculations, depending on which side the variable favors (postive for team
-                                1 and negative for team 2), the page will print a message saying who is more likely to win.
+                                While my brother is the driving force behind this idea, he has been unable to contribute recently due to other life priorities. Despite this, I'm still 
+                                making progress here and there, aiming to develop the project to at least learn something new—if not to completion.
                             </p>
+                            <p>
+                                The current version of the predictor offers a selection of 24 gods available during SMITE 2's close beta (using stats from SMITE 1 due to lack of access to 
+                                updated data). Players can choose their teams, and the tool calculates the probability of one team winning based on a comparison of average stats for both 
+                                teams. Right now, the tool uses only level 1 god stats and doesn't account for other factors like items or player skill.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <ul>
+                                <li>
+                                    Team Composition:
+                                    <ul>
+                                        <li>The predictor allows users to choose from 24 gods, ensuring no duplicate gods on a team. After selecting their team compositions, users submit their choices.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Prediction Logic:
+                                    <ul>
+                                        <li>Once the team is selected, the website calls the server for the gods' stats and compares the average stats between the two teams.</li>
+                                        <li>The comparison is straightforward: for each stat category, the tool checks which team performs better and “ticks” a variable in favor of that team. After 
+                                            all calculations, the result shows which team is more likely to win based on their average stats.</li>
+                                    </ul>
+                                </li>
+                            </ul>
                             <h4>What I Learned</h4>
+                            <ul>
+                                <li>
+                                    Relearning Web Development Basics:
+                                    <ul>
+                                        <li>Before diving into the project, I had to relearn the basics of HTML, CSS, and JavaScript. These foundational skills were crucial for the front-end 
+                                            development of the tool.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Database Setup and Server Communication:
+                                    <ul>
+                                        <li>I also learned how to set up a basic database and connect it with the front-end. One of the most challenging parts was understanding server 
+                                            communication between the front-end and back-end. I'm used to sequential execution, but working with server requests required asynchronous 
+                                            thinking. The server takes time to respond to API requests, which created challenges in the timing of the calculations and sometimes caused errors. 
+                                            With some trial and error (and help from online resources), I was able to get things working.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Networking Basics:
+                                    <ul>
+                                        <li>Although this project is relatively simple, it gave me exposure to the basics of networking and asynchronous code execution. This knowledge will 
+                                            be valuable when I eventually tackle multiplayer game development, such as for a WW2 FPS shooter I'm working on with a friend. Networking will be 
+                                            crucial when it comes time to implement multiplayer functionality in the game.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Reflection</h4>
                             <p>
-                                Like I said, this is a rough prototype of the general idea we want to pursue. Its far from perfect, but it gets the general idea across. In the pursuit of 
-                                making this prototype. I learned plenty. I atually started working on it before this portfolio. I had to relearn the basics of CSS, HTML, and Javascript.
-                                Afterwards, I had to figure out how to set up a basic database that can be used to retrieve the data. This biggest challenge of all was learning about the 
-                                server communication between the front-end website and the database in the back-end. It is a differnt way of thinking as I am used to things executing in order.
-                                But when I was making the prediction calculations part, I kept running into issues with executing certain code too soon as the server is taking time to respond
-                                to the API requests from the site, resulting in errors or calculations not acting acordingly. Eventually, I figured things out with the help of online resources.
+                                This project may not have gone in-depth or turned into something complex, but it laid the foundation for future projects involving server communication, 
+                                databases, and predictive algorithms. It also provided insight into networking—an area I'll need to focus on for future multiplayer game development.
                             </p>
                             <p>
-                                While this project may have not gone terribly in depth or isn't very complex, it at least exposed me to the basics of networking, which will be a challenge on
-                                its own for me later down the road when I start trying to make a game multiplayer. I know it will be necessary to look into sooner than later for the WW2
-                                FPS shooter game that I am working on with a friend as it's end goal is to be a multiplayer game.
+                                Though there's still a lot to be done before this tool reaches its potential, it has been a great starting point for learning about the web development 
+                                stack and server-side programming.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <footer>
-                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
                 </footer>
             </div>
 

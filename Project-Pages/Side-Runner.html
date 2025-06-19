@@ -79,64 +79,84 @@
                             <a href="../Downloads/SideRunnerProto_Windows.zip" download="SideRunnerProto_Windows.zip">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
-                        </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
                             <p>
-                                Side-Runner is a fast-paced endless side-scrolling runner game where the player needs to time their jumps to clear obstacles that will be in their way. If the
-                                player hits any of the obstacles, it will be game over for them. This project introduces sound effects, music as well as partical effects that will transform 
-                                the expereince of the game. In this prototype, you can also restart the game with the click of a button!
+                                Side-Runner is a fast-paced, side-scrolling endless runner where players must time their jumps to avoid obstacles. The project introduced animation systems,
+                                 particle effects, and audio — significantly enhancing the moment-to-moment feel of gameplay. It was part of the Unity Learn <em>Junior Programmer</em> Pathway and helped
+                                 solidify key interactive and audiovisual systems.
                             </p>
                             <h4>Features and Mechanics</h4>
-                            <p>
-                                The player simply controls the character by pressing the space bar to jump over obstacles. They can also press the space bar a second time while mid air to trigger
-                                a double jump that is only about half as powerful as the initial jump. The size of the jump is not proportional as its a force that is appliced to the player 
-                                character. The player can also hold down the S key to play the game at double speed if the would like to make the game more challengeing.
-                            </p>
-                            <p>
-                                Side-Runner also contains a nice combination of animation and audio that befits the game and makes the player think they are really in a rush. These are also combined
-                                with some extra special effects called particle systems that add to the game expereince and make the game seem a bit more alive.
-                            </p>
+                            <ul>
+                                <li>
+                                    Core Controls:
+                                    <ul>
+                                        <li>Press Spacebar to jump</li>
+                                        <li>Press Spacebar again mid-air to double-jump (reduced power)</li>
+                                        <li>Hold S to double the game speed for added challenge</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Game Loop: </strong>Colliding with an obstacle results in a game over. The player can restart with a single button press.</li>
+                                <li>
+                                    Visual & Audio Feedback:
+                                    <ul>
+                                        <li>Dynamic animations for movement, jumping, and crashing</li>
+                                        <li>Background music and sound effects for jumping and collisions</li>
+                                        <li>Particle effects (e.g. dust while running, explosions on impact) enhance feedback</li>
+                                    </ul> 
+                                </li>
+                            </ul>
                             <h4>What I Learned</h4>
+                            <p>This project introduced several new Unity systems and techniques</p>
+                            <ul>
+                                <li>
+                                    Background Looping:
+                                    <ul>
+                                        <li>Used a clever technique where two repeating background sprites shift left and reset position, creating an illusion of infinite 
+                                            scrolling without constant spawning or destroying objects.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Unity Animator System:
+                                    <ul>
+                                        <li>
+                                            Learned how to:
+                                            <ul>
+                                                <li>Set up an Animator component with an Animator Controller and Avatar</li>
+                                                <li>Use parameters to drive transitions between animation states</li>
+                                                <li>Adjust animation speed dynamically via script</li>
+                                            </ul>
+                                        </li>
+                                        <li>Gained experience managing transitions for player states like running, jumping, and colliding.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Particle Effects:
+                                    <ul>
+                                        <li>Integrated looping particle effects for running, and one-time burst effects for crashes.</li>
+                                        <li>Learned how to trigger effects via code (Play(), Stop()), and configure them to loop or play once based on context.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Audio Systems:
+                                    <ul>
+                                        <li>Implemented background music through the main camera's audio source.</li>
+                                        <li>Controlled sound effects (jumping, collisions) through the player script.</li>
+                                        <li>Gained an understanding of the roles of Audio Listeners vs Audio Sources, and how to manage them in code.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Reflection</h4>
                             <p>
-                                The first thing that was introduced to me was how to make a background, or object, seem infinate. I used to think it may add a new thing of the object and delete
-                                the old one when no longer visible by the player. But to my surprise, it is simpler than that. In this prototype game, the background is 2 images of the same 
-                                background put together in one object. To make it seem like the player is whizzing by a whole urban setting, the background simply moves at a decent pace, and since
-                                its the same image twice, after it has moved half the objects width, it resets its position at the beginning. This makes it seem like it repeats infinately as the 
-                                player plays the game.
-                            </p>
-                            <p>
-                                In this prototype, I also got to learn about how the basics of the animation systems in Unity work and how to change from one animation to the next through scripting.
-                                I was also introduced how to change the speeds of animation as well through scripting. To have animations work on your character, you must have an Animator attatched
-                                to the player object as well as as Controller and Avatar put into that animator. The Animator Avatar is basically a mapping of the character bones to control how the
-                                animations work on the character's structure. The Animator Controller basically acts as the brain as it amnages the animation clips based on the state that the object
-                                is in as well as how it transitions from different animations. In the animator window, there are different layers you can see which are essentially the logic of how
-                                animations play and flow. In another tab there are parameters which can alter the state of the animation or how it works. All this can be accomplished in coding by 
-                                grabbing the animator object and you can alter the parameters by setting their values to play and change the animations. The only tricky part is understanding the
-                                animations themselves and what triggers and alters them and how they are affected.
-                            </p>
-                            <p>
-                                To complmiment the animations, both sound and particle effects were also something I needed to learn. In all honesty these are simple to program into projects any way
-                                you like. What is difficult about them is actually having to make them in the first place. Particles come with particle systems which you can alter any way you like 
-                                to achieve the effect you want. For instance, the dirt that is by the character's feet while they run needs to loop infinately to make the charcter appear to be running
-                                fast and hard. The explosion particles do not need to. There is a setting that you can simply set true or false to make such things happen. You can play and stop these
-                                effects by simply calling on them and using the stop and play functions. There is more settings and things you can do to alter them, but that would be too much to explain.
-                                Audio effects also function similarly with playing them and such with different functions is all. But for sound to play in the game, one there must be one Audio Listener, 
-                                often on the main camera, and there needs to be at least one audio source somewhere for the listenr to pick up. Audio sources come with their own settings you can adjust 
-                                to achieve whatever goal you want, and all of them can also be achieved using code as well, as long as you know what you want. In this project all I simply did was have 
-                                background music play coming from  the main camera while the player character in its main script hold the audio sound effects for things like jumping and crashing. Whenever
-                                the script detected any relevant input, it would play those audio sounds to make the game feel more alive. There is much more to dive into these 2 systems that I learned more
-                                in depth about when going down Unity Learn's Creatiuve core path.
-                            </p>
-                            <p>
-
+                                Side-Runner marked a key point in my Unity learning where gameplay systems started to feel "alive" — with audio, animation, and effects coming
+                                 together. It taught me how technical implementation and player feedback combine to elevate even simple mechanics into engaging experiences.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <footer>
-                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
                 </footer>
             </div>
 

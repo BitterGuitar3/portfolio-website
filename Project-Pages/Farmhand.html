@@ -71,60 +71,48 @@
                             <a href="../Downloads/FarmhandProto_Windows.zip" download="FarmhandProto_Windows.zip">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
-                        </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
                             <p>
-                                This project was the second prototype I made out of the 5 for the Junior Programmer Pathway. The core focus of this project was developing basic gameplay. In this
-                                prototype, the player can control the character using the A and D keys to move left and right. They can also press the spacebar to shoot food that they can use 
-                                to feed the animals that are flying by on the screen. The bigger the animal, the more food it takes to feed them. And before you say anything, yes I understand 
-                                that its a bit ironic to feed a cow some steak.
+                                Farmhand was the second prototype I built during the Unity Learn <em>Junior Programmer Pathway</em>. The focus of this project was learning how to implement basic 
+                                gameplay mechanics. The player controls a character who feeds animals by shooting food at them before they exit the screen or collide with the player.
+                            </p>
+                            <p>
+                                While simple in concept, the prototype introduced important gameplay concepts like random object spawning, health-style UI, and object pooling for performance efficiency.
                             </p>
                             <h4>Features and Mechanics</h4>
-                            <p>
-                                Farmhand has basic movement controls that the player can use to interact with the game. The goal of the game is to feed as many animals as you possibly can before
-                                you run out of lives. You lose a life when you either get hit by an animal or if the animal makes it off screen before you can feed it. For every animal that is fed,
-                                you get score added to your total score based off of how much you had to feed the animal.
-                            </p>
-                            <p>
-                                The 2 major features of the prototype are pretty basic, but they do open a lot of possibilities for future projects. The first one being the random generation of
-                                the animals. They can spawn either from the left or right or from the top at any random point along those sides. This creates a more dynamic game that isnt set in 
-                                a constant pattern that is fully predictable. The second feature is the use of a healthbar type slider that is on top of the animals to let the player know how much
-                                then need to feed the animal in order to score. Instead of it going down like a health bar, it goes up until its full and then score points for the player.
+                            <ul>
+                                <li><strong>Core Gameplay: </strong>The player moves left and right using A/D keys and presses Spacebar to shoot food. The objective is to feed as many animals as possible
+                                 before losing all lives.</li>
+                                <li><strong>Dynamic Spawning: </strong>Animals spawn randomly from the left, right, or top of the screen, with randomized positions and movement directions.</li>
+                                <li><strong>Feeding System: </strong>Each animal has a slider-style "hunger bar" UI that fills when hit with food. Larger animals require more food to be fed successfully.</li>
+                                <li><strong>Scoring & Lives: </strong>Players earn points for each fed animal, based on how much food was required. Lives are lost if animals reach the edge of the screen 
+                                or collide with the player.</li>
+                            </ul>
                             </p>
                             <h4>What I Learned</h4>
                             <p>
-                                One thing I learned was how to spawn objects in the world whether it is through random generation or something set in stone. Given my background in coding from my major 
-                                I already conceptually knew how to chose items from an array randomly and spawn them in a postion either randomly or fixed. The trick was knowing the right functions
-                                to use that are provided by Unity. Random.Range selects a number between the minimum value (inclusive) and the max value (exclusive) that you can then use to select
-                                a random object from and array or list and then use it to also pick a range of spawn points for that object to spawn at. Then all it simply requires you to do is use the 
-                                Instantiate() function to spawn the object and set its postion and rotation based on what you as the programmer want. This was the method I did for spawning the animals,
-                                but spawning the food to feed the animals went through a different approach.
+                                This project helped expand my understanding of Unity in a few important ways: 
                             </p>
+                            <ul>
+                                <li><strong>Object Instantiation: </strong>Learned how to use Random.Range() and Instantiate() to spawn game objects at randomized intervals and positions.</li>
+                                <li><strong>Object Pooling: </strong>Built a simple object pooling system for food projectiles to reduce CPU overhead and avoid unnecessary instantiations/destructions
+                                 — improving performance and game responsiveness.</li>
+                                <li><strong>Collision Handling: </strong>Gained hands-on experience with OnTriggerEnter() to manage interactions between food and animals. Learned when to use triggers 
+                                versus colliders to avoid unintended physics reactions.</li>
+                                <li><strong>UI Mechanics: </strong>Implemented UI elements (sliders) that update in real-time to communicate progress to the player — reinforcing responsive game feedback.</li>
+                            </ul>
+                            <h4>Reflection</h4>
                             <p>
-                                To spawn the food for the player to use to feed the animals, I created what is called an object pooler. An object pooler is basically a group of objects, a "pool", that
-                                are held by a container object that acts as the parent object. What an object pooler does is it already has created all the objects, but they are all deactivated until 
-                                they are needed. In Farmhand, when the player presses the space bar, the game checks the object pooler and its list to retireve the first inactive object and sets it active.
-                                Once it is activated, its postiion and rotation is set to be in front of the player and shoots forwards. What I learned about object pooling vs spawning an destroying objects
-                                is that it basically helps improve performance and efficiency of the game as it doesnt have to deal with the CPU overhead of creating a new object and destorying it causing
-                                garbage collection. This leads to a smoother game and better resource management.
-                            </p>
-                            <p>
-                                The last big thing I learned making this prototype was how to handle object collisions. In Unity, there are collider boxes that can either act as a physical collider box,
-                                kinda like an invisible wall you would run into game, or they can act as trigger moxes when something enter them. Typically you would want a physical collider to match the
-                                shape and size of the object its attached to instead of just being an actual box or other primitive shape. But with either a collider or a trigger, they both have a 
-                                function they can call when something interacts with them. When 2 objects that have colliders or rigidbodies touch, they call the OnCollisionEnter function, and you can
-                                use this to trigger whatever code you want. When a collider that is marked as a trigger overlaps with another collider, it calls the OnTriggerEnter function which then
-                                can do whatever you want it to do. In Farmhand, it was best to use the OnTriggerEnter as when 2 objects collide, they can move. If I were to use OnCollisionerEnter, the
-                                food would have been deactivated, but some of the animals would still be moving, and that would have caused them to shift from the course I set them on. A little work
-                                around I could do for that was free which axis the animals moved on, but that would have required more slightly complicated code.
+                                Though Farmhand is a small prototype, it introduced me to a wide range of systems that are foundational to gameplay programming: object pooling, collision logic, UI 
+                                integration, and randomization. It was also the first project where I felt I was designing a real gameplay loop and balancing challenge, pacing, and player feedback.  
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <footer>
-                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
                 </footer>
             </div>
 

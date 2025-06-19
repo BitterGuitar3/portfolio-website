@@ -75,50 +75,82 @@
                             <a href="../Downloads/DodgeAndWeaveProto_Windows.zip" download="DodgeAndWeaveProto_Windows.zip">Windows Download</a>
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
-                        </div>
                         <div id="project-description" class="detail">
                             <h4>About</h4>
                             <p>
-                                This is prototype number 4 of 5 going down the Junior Programmer Pathway on Unity Learn. The focus of this prototype is to develop the basics of designing and
-                                coding gameplay mechanics. Dodge-and-Wevea is a arcade style sumo battle game where the player faces waves of enemies that increases in difficulty with each 
-                                new wave. On every new wave, a powerup spawns that the player can use to help defeate the enemies, or they can chose to ignore it and save it for the next wave.
-                                To play, the player can use the A and D keys to rotate the camera around the center island. They use the W and S keys to push the ball forward and backwards.
-                                That is the only movement the player has to make it a more challenging task of avoiding the enemy.
+                                Dodge-and-Weave is a wave-based arcade-style prototype inspired by sumo battle mechanics, where players must push enemies off a small island arena. 
+                                This was the fourth of five prototypes built during the <em>Junior Programmer</em> Pathway on Unity Learn. The focus of the project was on designing and 
+                                coding gameplay mechanics, particularly enemy AI and power-up systems.
                             </p>
+                            <p>Players use: </p>
+                            <ul>
+                                <li>A/D to rotate around the island</li>
+                                <li>W/S to push the player forward/backward</li>
+                            </ul>
+                            <p>This limited movement design forces players to think strategically while evading enemies.</p>
                             <h4>Features and Mechanics</h4>
-                            <p>
-                                Dodge-and-Weave has enemies spawn at a random position on the island that chase the player down to try and push them off the map and lose. The enemy is always
-                                keeping track of where the player is an will be pushed in that direction of the player. The number of enemies that spawn equates to the wave number the player 
-                                has reached. So if they are on wave 10, 10 enemies spawn. In each wave, for all the enemies that spawn, there is a chance it will be a normal enemy that the 
-                                player can compete with in pushing off the map or it will be a larger and heavier enemy which the player will have difficulty in pushing.
-                            </p>
-                            <p>
-                                There are 2 powerups that the player can get, pushback and rockets. When the player has picked up a powerup, and yellow ring aroound the player will appear. 
-                                The player has 5 seconds to use the powerup they pick up any way they would like. The pushback powerup is indicated by a golden star that is on the island, and
-                                it allows the player to push back any enemy with a strong the collides into them. This is very effective with the easier and lighter enemies, but it is not as 
-                                effective with the larger enemies. The rockets is indicated by a golden flame that spawns on the island. To use the rockets, the user only needs to press the
-                                F key for "fire". This will send a number of rockets equal to the number of enemies that are still alive towards each enemy. When the rockets collide with an enemy,
-                                it send them flying off the map. Once the user presses F and the rockets have fired, they no longer have the powerup, but they must also use it before 5 seconds 
-                                has passed or they will lose out on the powerup. The rockets also have a time limit for them to hit their target before they dissapear as well.
-                            </p>
+                            <ul>
+                                <li>
+                                    Wave-Based Enemy Spawning:
+                                    <ul>
+                                        <li>Each wave spawns a number of enemies equal to the current wave count (e.g., Wave 6 = 6 enemies).</li>
+                                        <li>Enemies include both light (easy to push) and heavy (resistant to knockback) types.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Enemy Behavior:
+                                    <ul>
+                                        <li>Enemies spawn at random locations on the island.</li>
+                                        <li>Each enemy continuously tracks and moves toward the player, trying to knock them off the platform.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Powerups: <br>
+                                    Players can collect one of two temporary powerups, each active for 5 seconds once picked up:
+                                    <ul>
+                                        <li>Pushback (Golden Star): Causes a strong knockback on enemies that collide with the player.</li>
+                                        <li>Rockets (Golden Flame): Fires a number of homing rockets (equal to number of enemies alive) using the F key. Rockets auto-target and knock 
+                                        enemies off the map.</li>
+                                    </ul>
+                                </li>
+                            </ul>
                             <h4>What I Learned</h4>
+                            <p>This prototype helped me expand on earlier concepts and implement slightly more advanced mechanics:</p>
+                            <ul>
+                                <li>
+                                    Object Tracking and Targeting:
+                                    <ul>
+                                        <li>Learned how to make an object "track" another object's position by calculating vector direction each frame.</li>
+                                        <li>Discovered how to use Transform.LookAt() to rotate projectiles (like rockets) toward their moving targets.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Powerup Systems:
+                                    <ul>
+                                        <li>Built temporary, conditional powerups with timers.</li>
+                                        <li>Developed interaction systems where one pickup can dramatically alter the gameplay loop (e.g., clearing a wave with a single button).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Reinforced Skills:
+                                    <ul>
+                                        <li>Applied previously learned concepts in new ways (e.g., spawning, input handling, physics-based push forces).</li>
+                                        <li>Learned to combine mechanics in a modular way to form emergent gameplay loops.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Reflection</h4>
                             <p>
-                                The challenge with this prototype game was creating objects that can locate and follow other objects, like the enemies and the rocekts. Conceptually I had an idea
-                                of how it would be done, but found it a bit challengeing to put into practice. I learned that whatever the object is that is following another object needs to
-                                constantly know the position of what it is following and subtract it from is own current position. To make sure an object is looking at what it is following, in 
-                                the case of the rockets, there is also a function for their transform property that is called LookAt that rotates the object in the direction of its target object.
-                            </p>
-                            <p>
-                                Most of everything else that I did with coding was things I was already aware of and had used in previous projects. This project just helped me piece them together
-                                in a different way tho create some unique, but basic, gameplay mechanics that I may have never thought of how to do. Doing these prototypes have opened my eyes to
-                                how much you can do with so little. It is amazing what I could potentially do when I gain more experience and knowledge.
+                                Dodge-and-Weave was a turning point in understanding how relatively simple behaviors (like tracking and knockback) can be mixed to create strategic tension
+                                and replayability. It made me realize how much variety and depth can be achieved with just a few core systems and inspired new ways to think about game 
+                                design on a small scale.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <footer>
-                    <p>&copy; 2024 Andrew Johnson. All rights reserved.</p>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
                 </footer>
             </div>
 
