@@ -1,0 +1,161 @@
+<!doctype html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/project-page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Andrew Johnson - Portfolio</title>
+    </head>
+    <body>
+        <main>
+            <div id="content">
+                <header>
+                    <div id="Name_and_Title">
+                        <h1>Andrew Johnson</h1>
+                        <small>Aspiring Game Developer</small>
+                    </div>
+                    <nav>
+                        <a class="page" href="../index.html"><h2>Home</h2></a>
+                        <a class="page" href="../portfolio.html"><h2>Portfolio</h2></a>
+                        <a class="page" href="../contact.html"><h2>Contact</h2></a>
+                    </nav>
+                    <div id="socials">
+                        <a href="https://github.com/BitterGuitar3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/andrew-johnson-988235244" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </header>
+
+                <section id="project-content">
+                    <div id="carousel-container">
+                        <div id="carousel">
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Lost Empire Project/Player.PNG" alt="A Picture of the player with its setup in the inspector">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Lost Empire Project/Player Controls Demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Lost Empire Project/OpenNPCs.PNG" alt="Open world roaming NPCs and their settings">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Lost Empire Project/Open NPCs.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Lost Empire Project/ZonedNPCs.PNG" alt="ZOned NPCS and their settings">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Lost Empire Project/Zoned NPCS.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Lost Empire Project/Dynamic Inspector.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Lost Empire Project/Combat Demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div id="project-details">
+                        <div id="title" class="detail">
+                            <h3 style="font-size: 30px; font-weight: normal;">Name: Lost Empire Project<strong></strong></h3>
+                        </div>
+                        <div id="type" class="detail">
+                            <h3 style="font-size: 30px; font-weight: normal;">Project Type: Prototype<strong></strong></h3>
+                        </div>
+                        <div id="info" class="detail">
+                            <h4 style="font-size: 20px;">Basic Info</h4>
+                            <ul>
+                                <li>Engine: Unity</li>
+                                <li>Role: Gameplay Programmer</li>
+                                <li>Timeline: 4.5 months</li>
+                                <li>Team: Solo (demonstrating my contributions without breaking contract)</li>
+                            </ul>
+                        </div>
+                        <div id="project-description" class="detail">
+                            <h4>About</h4>
+                            <p>
+                                This ongoing project is being developed in collaboration with a small indie team. My primary contributions have been designing and
+                                 programming the player controller and enemy AI systems. The project is under an NDA with Lost Empire, so this page focuses on a 
+                                 general overview of my work without revealing confidential details.
+                            </p>
+                            <p>
+                                The player system is built on a finite state machine (FSM), which controls transitions between movement states and ensures consistent
+                                 animation syncing and input handling. For AI, I initially implemented state machine logic but later transitioned to a behavior tree 
+                                 architecture to better support complex, scalable decision-making.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <ul>
+                                <li>
+                                    <strong>FSM-Driven Player Controller:</strong> Player actions are handled via a state machine that manages walking, sprinting, crouching, jumping 
+                                    (including double jump), dashing, and pausing. Each state has adjustable parameters such as speed, force, and cooldowns.
+                                </li>
+                                <li>
+                                    <strong>Combat System:</strong> Players can aim down sights for precision, fire a ranged weapon, and reload depending on their 
+                                    current state. Pausing the game suspends physics and input processing globally.
+                                </li>
+                                <li>
+                                    <strong>Behavior Tree-Based AI:</strong> NPCs operate on a behavior tree architecture powered by a blackboard system. The blackboard
+                                     accepts key-value pairs using generic methods, allowing flexible input and type-safe configuration of AI logic at runtime.
+                                </li>
+                                <li>
+                                    <strong>Dynamic AI Configuration:</strong> Each NPC is configured through four main blackboard inputs. The first one influences their
+                                     overall behavior (e.g., hostile vs friendly), while the second defines its movement logic.
+                                </li>
+                                <li>
+                                    <strong>Navigation & Area Control:</strong> NPCs navigate the world using Unity's NavMesh system, with support for area masks and
+                                     restricted zones. Some enemy types are equipped with basic detection logic for spotting the player, with plans to expand this into
+                                      a faction-based awareness system
+                                </li>
+                            </ul>
+                            <h4>What I have Leared</h4>
+                            <p>
+                                This project has been instrumental in deepening both my technical and collaborative development skills. Working with a remote team has taught
+                                 me how to communicate across time zones and cultures while staying aligned on shared goals.
+                            </p>
+                            <p>
+                                From a technical perspective, I've gained hands-on experience with: 
+                            </p>
+                            <ul>
+                                <li>Designing and implementing gameplay logic using FSMs and behavior trees</li>
+                                <li>Working with Unity's NavMesh system for AI pathfinding and spatial awareness</li>
+                                <li>Applying polymorphism and inheritance effectively to reduce redundancy and improve scalability in both the player and AI systems</li>
+                                <li>Using generics and type checking in systems like the AI blackboard to handle diverse data inputs safely and efficiently</li>
+                                <li>Evaluating async patterns in C# through tasks, and ultimately adopting coroutines for greater control within Unity's lifecycle</li>
+                                <li>Transitioning from an improvisational development style to a more structured workflow using flowcharts and diagrams to track complex AI relationships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved. Last Updated July 17th, 2025</p>
+                </footer>
+            </div>
+
+            <script src="../project-page.js"></script>
+        </main>
+    </body>
+</html>
