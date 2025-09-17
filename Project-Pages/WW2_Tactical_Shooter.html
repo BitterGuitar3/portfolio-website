@@ -1,0 +1,218 @@
+<!doctype html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/project-page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Andrew Johnson - Portfolio</title>
+    </head>
+    <body>
+        <main>
+            <div id="content">
+                <header>
+                    <div id="Name_and_Title">
+                        <h1>Andrew Johnson</h1>
+                        <small>Game Developer - Focus in Programming</small>
+                    </div>
+                    <nav>
+                        <a class="page" href="../index.html"><h2>Home</h2></a>
+                        <a class="page" href="../portfolio.html"><h2>Portfolio</h2></a>
+                        <a class="page" href="../contact.html"><h2>Contact</h2></a>
+                    </nav>
+                    <div id="socials">
+                        <a href="https://github.com/BitterGuitar3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/andrew-johnson-988235244" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </header>
+
+                <section id="project-content">
+                    <div id="carousel-container">
+                        <div id="carousel">
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/WW2 Tactical Shooter/AI_Cover.PNG" alt="AI taking cover from player">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/WW2 Tactical Shooter/Map.PNG" alt="The map built for testing">
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/WW2 Tactical Shooter/Shot3.PNG" alt="Demo setup of gun">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/WW2 Tactical Shooter/UIDemo.png" alt="UI demo from player POV">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/WW2 Tactical Shooter/WW2 shooter.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div id="project-details">
+                        <div id="title" class="detail">
+                            <h3>Name: <strong>WW2 Tactical Shooter</strong></h3>
+                        </div>
+                        <div id="type" class="detail">
+                            <h3>Project Type: <strong>Prototype</strong></h3>
+                        </div>
+                        <div id="info" class="detail">
+                            <h4>Basic Info</h4>
+                            <ul>
+                                <li>Engine: Unreal 5.5.4</li>
+                                <li>Role: Programmer</li>
+                                <li>Timeline: March 2025 - Sept 2025 (6 months)</li>
+                                <li>Team: Solo</li>
+                            </ul>
+                        </div>
+                        <div id="downloads" class="detail">
+                            <a href="https://github.com/Oathsteel-Forge/WW2-Realistic-Shooter"  target="_blank">Github Repository</a>
+                            <a href="../Downloads/WW2_Tact_Shooter_Windows.zip" download="WW2_Tact_Shooter_Proto_Win.zip">Windows Download</a>
+                            <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
+                        </div>
+                        <div id="project-description" class="detail">
+                            <h4>About</h4>
+                            <p>
+                                This prototype is an early foundational step towards a large-scale tactical shooter inspired by <em>Hell Let Loose</em>, <em>War Thunder</em>,
+                                 and <em>Battlefield</em>. The goal is to blend realistic infantry combat with realistic vehicle mechanics and immersive environmental destruction.
+                                 However, this initial version is scoped down to a local 1v1 PvE environment, allowing me to focus on core gameplay systems without the added
+                                 complexity of networking.
+                            </p>
+                            <p>
+                                This was my first project using Unreal Engine and was built entirely using Blueprints. While I used a few tutorials to get started, most of my 
+                                learning came through hands-on experimentation and problem-solving - including getting insight from other Unreal developers and online sources. 
+                                The result is a rough but playable prototype which mirrors many core FPS mechanics, all designed from scratch.
+                            </p>
+                            <p>
+                                While this is a personal prototype for now, it also serves as early groundwork for a larger project I plan to develop under my own indie studio 
+                                in the future.
+                            </p>
+                            <h4>Features and Mechanics</h4>
+                            <ul>
+                                <li>
+                                    <strong>First-Person Player System</strong><br>
+                                    The Player can:
+                                    <ul>
+                                        <li>Equip, reload, and switch between two weapons (primary and secondary)</li>
+                                        <li>Aim down sights (with camera altering timeline and IK Systems)</li>
+                                        <li>Interact with pickups and ammo boxes</li>
+                                        <li>Sprint, crouch, and jump</li>
+                                        <li>Respawn shortly after dying</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Enemy AI (1v1 Comat Logic)</strong><br>
+                                    The NPC mirrors many player abilities and is driven by custom logic:
+                                    <ul>
+                                        <li>Shoots at the player with reduced accuracy over distance</li>
+                                        <li>Reloads and switches weapons based on ammo status</li>
+                                        <li>Picks up weapons and interacts with ammo boxes</li>
+                                        <li>Seeks cover when shot at or after spotting the player</li>
+                                        <li>
+                                            Makes tactical decisions when low on ammo, including:
+                                            <ul>
+                                                <li>Reloading if possible</li>
+                                                <li>Retreating to safety</li>
+                                                <li>Charging at the player (in absence of better options)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Inventory System</strong><br>
+                                    Handles two weapon slots (primary and secondary) for both player and NPC. Weapons can be dropped, swapped, and picked up dynamically.
+                                </li>
+                                <li>
+                                    <strong>HUD System</strong><br>
+                                    A simple UI displays current ammo (AmmoInClip / AmmoInReserve) for the equipped weapon. The HUD updates in real time when firing or
+                                    reloading and hides when no weapon is equipped.
+                                </li>
+                                <li>
+                                    <strong>Pause Menu</strong><br>
+                                    A basic pause screen offers options to resume or quit. The game and AI continue running in the background, simulating how a pause would
+                                    behave in a multiplayer environment.
+                                </li>
+                                <li>
+                                    <strong>Weapon System</strong><br>
+                                    Guns exist in two forms - world objects and equipped meshes. Though currently using static meshes with no animations, the underlying system
+                                    supports:
+                                    <ul>
+                                        <li>Interaction</li>
+                                        <li>Equip/unequip logic</li>
+                                        <li>Dynamic ammo tracking</li>
+                                        <li>IK-based hand positioning for realism</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>What I Learned</h4>
+                            <p>
+                                This prototype became more than just an exercise in feature building - it taught me how to scope, iterate, and plan for the future. I learnd: 
+                            </p>
+                            <ul>
+                                <li>How to take a loosely planned idea and shape it into something playable</li>
+                                <li>The risks of starting without a scalable structure, and how to work around that</li>
+                                <li>To recognize when to prioritize functionality over completeness (e.g, skipping melee and healing for now)</li>
+                                <li>How to use AI systems in Unreal (like the behavior trees and EQS) to simulate tactical behavior</li>
+                                <li>The importance of modular code and reducing reliance on direct casting or binding</li>
+                                <li>How to approach IK and animation logic through both guided and self-driven exploration</li>
+                            </ul>
+                            <h4>Reflection</h4>
+                            <p>
+                                In retrospect, the project taught me just as much about design discipline as it did about systems and mechanics. I wanted to add everything
+                                - melee, healing, recoil systems - but I learned to cut scope when needed and focus on what mattered most at each stage.
+                            </p>
+                            <p>
+                                The current prototype is rough in structure, I believe. There's a good bit of direct casting to obtain certain values and function that could possibly
+                                be reduced.There are also a few areas where logic might be overly event-driven. But now that the first pass is complete, I can use it as a learning
+                                artifact - either to gradually refactor and modularize or rebuild entirely with a stronger artchitectual plan.
+                            </p>
+                            <h4>Planned Improvements & Next Steps</h4>
+                            <p>Technical & Structural</p>
+                            <ul>
+                                <li>Replace excessive casting with interfaes or event dispatchers</li>
+                                <li>Create a shared base animation blueprint for Player and NPC for at least similar event data and movement animations</li>
+                                <li>Optimize IK transform updates and animation variables synching</li>
+                                <li>Learn and use modular data systems (JSON or data tables) for weapon configurations</li>
+                                <li>Rewrite interaction logic to support hold vs press behavior</li>
+                                <li>Clean up HUD by removing binding heavy elements</li>
+                            </ul>
+                            <p>Gameplay Features</p>
+                            <ul>
+                                <li>Add audio cues for footsteps as well as sounds for items hitting the ground</li>
+                                <li>Rework hip-fire accuracy using dynamic spread system instead of relying on animation sway</li>
+                                <li>Refactor recoil system to support recoil patterns and camera adjustment</li>
+                                <li>Improve weapon drop behavior - have them detatch from their sockets instead</li>
+                                <li>Improve NPC aiming - dynamically predict and fire at moving targets</li>
+                                <li>Introduce class-based loadouts with support, assault, and skirmisher roles</li>
+                                <li>Expand melee system (knife attack prototype)</li>
+                                <li>Have camera stay with head upon death and have a respawn selection screen</li>
+                            </ul>
+                            <p>AI Behavior Upgrades</p>
+                            <ul>
+                                <li>Replace EQS-base cover with dedicated cover points</li>
+                                <li>Develop basic flanking logic</li>
+                            </ul>
+                            <p>Planning & Documentation</p>
+                            <ul>
+                                <li>Write formal development plan for the next phase</li>
+                                <li>Document communication and modular responsibilities between systems</li>
+                                <li>Decide between a total rebuild or progressive refacotoring approach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
+                </footer>
+            </div>
+
+            <script src="../project-page.js"></script>
+        </main>
+    </body>
+</html>
