@@ -81,7 +81,7 @@
     width: 90%;
 }
 
-.experienceList li:last-child {
+.experienceList li.last-odd-item {
     grid-column: 1/ -1;
     justify-self: center;
     max-width: 44%;
