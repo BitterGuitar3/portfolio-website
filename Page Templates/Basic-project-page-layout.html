@@ -9,21 +9,7 @@
     <body>
         <main>
             <div id="content">
-                <header>
-                    <div id="Name_and_Title">
-                        <h1>Andrew Johnson</h1>
-                        <small>Aspiring Game Developer</small>
-                    </div>
-                    <nav>
-                        <a class="page" href="../index.html"><h2>Home</h2></a>
-                        <a class="page" href="../portfolio.html"><h2>Portfolio</h2></a>
-                        <a class="page" href="../contact.html"><h2>Contact</h2></a>
-                    </nav>
-                    <div id="socials">
-                        <a href="https://github.com/BitterGuitar3" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/andrew-johnson-988235244" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </header>
+                <header></header>
 
                 <section id="project-content">
                     <div id="carousel-container">
@@ -78,12 +64,15 @@
                     </div>
                 </section>
 
-                <footer>
-                    <p>&copy; 2025 Andrew Johnson. All rights reserved.</p>
-                </footer>
+                <footer></footer>
             </div>
 
             <script src="../project-page.js"></script>
+            <script src="includes.js"></script>
+            <script>
+                loadHTML('header', 'Includes/header.html');
+                loadHTML('footer', 'Includes/footer.html');
+            </script>
         </main>
     </body>
 </html>
