@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/project-page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Andrew Johnson - Portfolio</title>
+    </head>
+    <body>
+        <main>
+            <div id="content">
+                <header></header>
+
+                <section id="project-content">
+                    <div id="carousel-container">
+                        <div id="carousel">
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Modular Chess/MainMenu.png" alt="Main Menu">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Modular Chess/ModSelection.png" alt="Mod Selection Menu">
+                            </div>
+                            
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Modular Chess/FogofWar2.png" alt="Gameplay Snapshot involving Fog of War Mod">
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Modular Chess/GameSnapshot.png" alt="Gameplay Start with Different Mods">
+                            </div>
+
+                            <!--<div class="carousel-slide">
+                                <video controls>
+                                    <source src="" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>-->
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div id="project-details">
+                        <div id="title" class="detail">
+                            <h3>Name: <strong>Modular Chess</strong></h3>
+                        </div>
+                        <div id="type" class="detail">
+                            <h3>Project Type: <strong>Playable Prototype</strong></h3>
+                        </div>
+                        <div id="info" class="detail">
+                            <h4>Basic Info</h4>
+                            <ul>
+                                <li>Engine: Unity 6.3</li>
+                                <li>Role: Gameplay Programmer / Systems Designer</li>
+                                <li>Timeline: 14 weeks</li>
+                                <li>Team: Solo</li>
+                            </ul>
+                        </div>
+                        <div id="downloads" class="detail">
+                            <!--<a href=""  target="_blank">Github Repository</a>
+                            <a href="" download="">Windows Download</a>-->
+                            <a href="https://oathsteel-forge.itch.io/modular-chess" target="_blank">Itch.io Page</a>
+                        </div>
+                        <div id="project-description" class="detail">
+                            <h4>Core Systems</h4>
+                            <ul>
+                                <li>
+                                    <strong>Modular Rule System</strong>
+                                    <ul>
+                                        <li>Gameplay modifiers applied at runtime to alter core chess rules</li>
+                                        <li>Supports stacking and ordering of multiple rule changes per match</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Pre-Game Configuration System</strong>
+                                    <ul>
+                                        <li>Players select and combine modifiers before match starts</li>
+                                        <li>Rule set is constructed dynamically based on selection order</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Core Chess Engine</strong>
+                                    <ul>
+                                        <li>Fully playable local hot-seat implementation</li>
+                                        <li>Standard movement and win-condition validation system</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Board State Systems</strong>
+                                    <ul>
+                                        <li>Turn-based state tracking with dynamic rule evaluation</li>
+                                        <li>Experimental mechanics such as board flipping per turn</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Design Focus</h4>
+                            <ul>
+                                <li>Interaction between multiple rule-modifying systems</li>
+                                <li>Emergent gameplay through layered mechanics</li>
+                                <li>Exploring complexity growth in familiar strategy frameworks</li>
+                            </ul>
+                            <h4>Current Status</h4>
+                            <ul>
+                                <li>Playable prototype</li>
+                                <li>Core systems functional and extensible</li>
+                                <li>Ongoing iteration on mod interactions and rule clarity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer></footer>
+            </div>
+
+            <script src="../project-page.js"></script>
+            <script src="../includes.js"></script>
+            <script>
+                loadHTML('header', '../Includes/projectHeader.html');
+                loadHTML('footer', '../Includes/footer.html');
+            </script>
+        </main>
+    </body>
+</html>

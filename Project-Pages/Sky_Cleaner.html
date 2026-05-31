@@ -1,6 +1,8 @@
 <!doctype html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/project-page.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -76,45 +78,83 @@
                             <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>
                         </div>
                         <div id="project-description" class="detail">
-                            <p><em>A self-directed learning project built from scratch while completing Unity's Junior Programmer pathway.</em></p>
                             <h4>About</h4>
                             <p>
-                                Sky Cleaner is the first complete game I developed independently using Unity. I started the project while working through Unity's official “Junior Programmer” 
-                                learning pathway in late 2022 on their <a href="https://learn.unity.com">Unity Learn</a> website. The course gradually guided me from planning and prototyping 
-                                to full implementation, and this game was the result.
+                                Sky Cleaner is a self-directed Unity Project developed while completing Unity's Junior Programmer pathway. It served as my first full 
+                                end-to-end game development cycle, where I applied foundational programming and design concepts to build a complete playable arcade-style 
+                                experience. 
                             </p>
                             <p>
-                                Inspired by classic arcade shooters like <a href="https://www.google.com/search?client=opera-gx&q=galiga&sourceid=opera&ie=UTF-8&oe=UTF-8">Galaga</a>, Sky Cleaner 
-                                is a simplified take on the genre that allowed me to apply foundational Unity concepts, experiment with core gameplay loops, and complete a full project cycle 
-                                from start to finish.
+                                The project is inspired by classic arcade shooters such as Galaga, and focuses on building a simple but complete gameplay loop centered 
+                                around movement, shooting, and scoring.
                             </p>
-                            <h4>Features and Mechanics</h4>
+                            <h4>Core Systems</h4>
                             <ul>
-                                <li><strong>Movement & Shooting:</strong> The player uses WASD to fly a plane and spacebar to shoot, with a 3-bullet cap to encourage timing and movement. The 
-                                plane tilts visually as it moves, with spinning propeller and shadow effects to enhance immersion.</li>
-                                <li><strong>Enemy Spawning & Difficulty:</strong> Three difficulty levels adjust enemy spawn frequency. Enemies appear in randomized horizontal positions just 
-                                off-screen, creating varied gameplay each run.</li>
-                                <li><strong>Scoring System:</strong>Players earn points by popping balloons — more points for shooting than colliding. Score is tracked during gameplay to promote
-                                 replayability.</li>
-                                <li><strong>Sound & Visual Feedback:</strong> Basic sound effects are implemented for shooting, hits, and explosions. Background music was selected for its retro 
-                                feel and simplicity.</li>
+                                <li>
+                                    <strong>Player Control System</strong><br>
+                                    <ul>
+                                        <li>3D flight-style movement using WASD input</li>
+                                        <li>Limited-ammo shooting system (3-shot constraint)</li>
+                                        <li>Visual feedback through plane tilt, animation, and movement effects</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Enemy Spawning System</strong><br>
+                                    <ul>
+                                        <li>Randomized enemy spawn positions just outside the play area</li>
+                                        <li>Lightweight procedural spawning logic for replayability</li>
+                                        <li>Difficulty scaling through spawn rate adjustment</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Scoring System</strong><br>
+                                    <ul>
+                                        <li>Points awarded for destroying targets</li>
+                                        <li>Higher reward for skill-based actions vs collision-based outcomes</li>
+                                        <li>Runtime score tracking during gameplay sessions</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Audio & Feedback Systems</strong><br>
+                                    <ul>
+                                        <li>Basic sound effects for shooting, hits, and destruction</li>
+                                        <li>Background music selected to reinforce arcade tone</li>
+                                    </ul>
+                                </li>
                             </ul>
-                            <h4>What I Learned</h4>
-                            <p> This project was pivotal in reinforcing my understanding of Unity and C#. I gained hands-on experience with: </p>
+                            <h4>Development Focus</h4>
+                            <p>
+                                The primary goal of this project was to strengthen my understanding of Unity's core systems and workflow, including 
+                                component-based architecture, scene orginazation, and gameplay scripting in C#.
+                            </p>
+                            <p>
+                                It also served as practice in completing a full development cycle-from prototype to playable build-while managing
+                                scope and maintaining a consisten gameplay loop.
+                            </p>
+                            <h4>Key Learnings</h4>
                             <ul>
-                                <li>Object-oriented programming (OOP) in a game context</li>
-                                <li>Scene organization, input handling, and Unity's component-based architecture</li>
-                                <li>Visualizing class-object relationships and understanding how data flows between components. It also helped me develop the patience and structure needed to 
-                                    carry a project from prototype to final polish while balancing my college coursework.</li>
+                                <li>
+                                    Object-oriented programming applied to real gameplay systems
+                                </li>
+                                <li>
+                                    Unity component-based architecture and scene management
+                                </li>
+                                <li>
+                                    Structuring a complete gameplay loop from scratch
+                                </li>
+                                <li>
+                                    Basic difficulty scaling and player feedback systems
+                                </li>
+                                <li>
+                                    Completing a project independently from start to finish
+                                </li>
                             </ul>
-                            <h4>Potential Fixes and Updates</h4>
-                            <p>While functional, this project still has room for improvement</p>
-                            <ul>
-                                <li><strong>Dynamic Difficulty: </strong>Increase difficulty progressively by introducing tougher enemies and scaling enemy speed.</li>
-                                <li><strong>Abilities and Pickups: </strong>Add power-ups like shields or double-barrel shooting, with limited durations to maintain challenge.</li>
-                                <li><strong>Score Saving: </strong>Implement persistent high-score tracking with separate boards per difficulty level.</li>
-                                <li><strong>Visual Variety: </strong>Add dynamic background changes or time-of-day transitions to enhance visual interest during longer sessions.</li>
-                            </ul>
+                            <h4>Notes</h4>
+                            <p>
+                                This project was developed early in my learning process and primarily reflects foundational implementation work rather 
+                                than advanced architecture or system design. It represents an important baseline project in my progression toward more 
+                                complex gameplay programming work.
+                            </p>
                         </div>
                     </div>
                 </section>
