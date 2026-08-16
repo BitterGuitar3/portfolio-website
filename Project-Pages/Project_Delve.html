@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/project-page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Andrew Johnson - Portfolio</title>
+    </head>
+    <body>
+        <main>
+            <div id="content">
+                <header></header>
+
+                <section id="project-content">
+                    <div id="carousel-container">
+                        <div id="carousel">
+                            
+                            <div class="carousel-slide">
+                                <video controls>
+                                    <source src="../Media/Projects/Project Delve/Movie_001.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Project Delve/DungeonGeneration.gif" alt="Demonstration of basic dungeons being generated">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../Media/Projects/Project Delve/Hit registration.png" alt="Picture of player getting hit, resulting in basic feedback">
+                            </div>
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div id="project-details">
+                        <div id="title" class="detail">
+                            <h3>Name: <strong>Project Delve</strong></h3>
+                        </div>
+                        <div id="type" class="detail">
+                            <h3>Project Type: <strong>Playable Prototype</strong></h3>
+                        </div>
+                        <div id="info" class="detail">
+                            <h4>Basic Info</h4>
+                            <ul>
+                                <li>Engine: Unity 6.4</li>
+                                <li>Role: Gameplay Programmer / Systems Designer</li>
+                                <li>Timeline: Ongoing</li>
+                                <li>Team: Solo</li>
+                            </ul>
+                        </div>
+                        <div id="downloads" class="detail">
+                            <a href="https://github.com/BitterGuitar3/Procedural-Dungeon-Generator"  target="_blank">Dungeon Generator Core Repo</a>
+                            <!--<a href="" download="">Windows Download</a>
+                            <p>For all downloads, unzip to compressed file and launch the application by double clicking the executable file with the project's name</p>-->
+                        </div>
+                        <div id="project-description" class="detail">
+                            <h4>Project Overview / Game Direction</h4>
+                            <p>
+                                Project Delve is intended to become a fast-paced, reactive 2D roguelite dungeon crawler set in a dark medieval fantasy world. The game 
+                                is centered around movement, timing, positioning, and aggressive combat, with procedurally generated dungeon runs creating escalating 
+                                risk and reward. Players will gain temporary buffs and rewards throughout each run, allowing their playstyle to adapt based on the choices 
+                                and rewards they encounter. Each run will ultimately progress through themed floors and culminate in boss encounters designed to test 
+                                mastery of the game's core combat systems.
+                            </p>
+                            <h4>Core Systems</h4>
+                            <ul>
+                                <li>
+                                    <strong>Player & Combat Architecture</strong>
+                                    <ul>
+                                        <li>
+                                            Gameplay systems structured to separate input requests from gameplay logic, allowing for potential future multiplayer support
+                                        </li>
+                                        <li>
+                                            Separation of input, character control, weapon logic, combat, and health responsibilites
+                                        </li>
+                                        <li>
+                                            Sword-based melee combat with hit detection and attack cooldowns
+                                        </li>
+                                        <li>
+                                            Combat roll with directional movement and cooldown
+                                        </li>
+                                        <li>
+                                            Enemy AI with pursuit and timed attacks
+                                        </li>
+                                        <li>
+                                            Damage feedback including audio, hit flashes, and screen shake
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Procedural Dungeon Generation</strong>
+                                    <ul>
+                                        <li>
+                                            Modular room-based dungeon generation
+                                        </li>
+                                        <li>
+                                            Multiple room layouts for combat encounters
+                                        </li>
+                                        <li>
+                                            Procedurally generated room connections
+                                        </li>
+                                        <li>
+                                            Start, combat, loot, and boss room types
+                                        </li>
+                                        <li>
+                                            Dungeon layouts generated dynamically at runtime
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Enemy & Encounter Systems</strong>
+                                    <ul>
+                                        <li>
+                                            Basic melee enemy with player tracking and attack behavior
+                                        </li>
+                                        <li>
+                                            Encounter-based room progression
+                                        </li>
+                                        <li>
+                                            Enemy health and damage systems
+                                        </li>
+                                        <li>
+                                            Boss encounter using an expanded enemy configuration
+                                        </li>
+                                        <li>
+                                            Player death and retry flow
+                                        </li>
+                                        <li>
+                                            Encounter System
+                                            <ul>
+                                                <li>
+                                                    Rooms lock when combat begins
+                                                </li>
+                                                <li>
+                                                    Players must defeat all enemies before progressing
+                                                </li>
+                                                <li>
+                                                    Combat encounters are integrated into procedural room generation
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Game Flow & UI</strong>
+                                    <ul>
+                                        <li>
+                                            Procedurally generated run from starting room to boss encounter
+                                        </li>
+                                        <li>
+                                            Loot rooms containing basic health recovery
+                                        </li>
+                                        <li>
+                                            Boss defeat and reward interaction (another basic health potion)
+                                        </li>
+                                        <li>
+                                            Basic health, enemy health, pause, and main menu UI
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h4>Design Focus</h4>
+                            <ul>
+                                <li>
+                                    Procedural dungeon generation and room composition
+                                </li>
+                                <li>
+                                    Building a modular foundation for roguelite gameplay systems
+                                </li>
+                                <li>
+                                    Creating repeatable dungeon-crawler gameplay loops
+                                </li>
+                                <li>
+                                    Exploring encounter pacing through room layouts and enemy placement
+                                </li>
+                                <li>
+                                    Developing gameplay systems with clear separation of responsibilities
+                                </li>
+                                <li>
+                                    Designing systems that can be expanded as the project develops
+                                </li>
+                            </ul>
+                            <h4>Current Status</h4>
+                            <ul>
+                                <li>
+                                    Playable prototype
+                                </li>
+                                <li>
+                                    Core player, combat, enemy, and dungeon-generation systems functional
+                                </li>
+                                <li>
+                                    Procedural dungeon generation functional
+                                </li>
+                                <li>
+                                    Basic boss and run completion loop implemented
+                                </li>
+                                <li>
+                                    Currently iterating on combat feel, encounter balance, and overall polish
+                                </li>
+                                <li>
+                                    Additional roguelite progression systems planned
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer></footer>
+            </div>
+
+            <script src="../project-page.js"></script>
+            <script src="../includes.js"></script>
+            <script>
+                loadHTML('header', '../Includes/projectHeader.html');
+                loadHTML('footer', '../Includes/footer.html');
+            </script>
+        </main>
+    </body>
+</html>

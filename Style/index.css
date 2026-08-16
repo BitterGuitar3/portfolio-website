@@ -41,6 +41,46 @@
     animation: bounce 2s infinite;
 }
 
+#Current_Project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr ;
+    column-gap: 20px;
+    align-items: start;
+    overflow: hidden;
+}
+
+
+#Current_Project > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    height: 100%;
+}
+
+#Current_Project h3 {
+    font-size: 20px;
+}
+
+#Current_Project h2 {
+    font-size: 30px;
+    grid-column: 1/-1;
+}
+
+#Current_Project a {
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: auto;
+    background-color: white;
+}
+
+#Current_Project img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Experience Section */
 #experience {
     display: grid;
